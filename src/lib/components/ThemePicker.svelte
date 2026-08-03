@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { THEMES, setTheme, theme, type ThemeId } from '$lib/theme.svelte';
+	import EffectsMenu from '$lib/components/EffectsMenu.svelte';
 
 	const uid = $props.id();
 	const menuId = `theme-menu-${uid}`;
@@ -19,6 +20,15 @@
 		setTheme(id);
 		menu.hidePopover();
 	}
+
+	/* Only tube-era themes have a CRT to simulate. Read from --t-crt rather than listing
+	   theme ids, so a new theme opts in by setting that var and nothing else. */
+	const crtTheme = $derived.by(() => {
+		theme.current;
+		if (typeof document === 'undefined') return false;
+		const v = getComputedStyle(document.documentElement).getPropertyValue('--t-crt');
+		return (parseFloat(v) || 0) > 0;
+	});
 </script>
 
 <button
@@ -35,7 +45,7 @@
 	id={menuId}
 	popover
 	onbeforetoggle={(e) => e.newState === 'open' && anchor()}
-	class="theme-menu border-line rounded-box glow-box bg-bg border p-1"
+	class="theme-menu crt-glass border-line rounded-box glow-box bg-bg border p-1"
 >
 	{#each THEMES as t (t.id)}
 		<button
@@ -48,6 +58,12 @@
 			{t.label}
 		</button>
 	{/each}
+
+	{#if crtTheme}
+		<div class="border-line mt-1 border-t pt-1">
+			<EffectsMenu />
+		</div>
+	{/if}
 </div>
 
 <style>

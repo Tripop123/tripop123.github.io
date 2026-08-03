@@ -74,6 +74,13 @@
 	--t-radius: 5px;
 	--t-glow: none;
 	--t-box-glow: none;
+	--t-drop-glow: none;
+	--t-crt: 0;
+	--t-crt-scan: 0;
+	--t-crt-ca: 0;
+	--t-crt-grille: 0;
+	--t-crt-bloom: 0;
+	--t-crt-roll: 0;
 	--t-scheme: dark;
 	--t-body: 'JetBrains Mono Variable';
 	--t-display: 'Departure Mono';
@@ -82,6 +89,7 @@
 }
 
 [data-theme='light'] {
+	--t-drop-glow: none;
 	--t-scheme: light;
 	--t-bg: #efe5c0;
 	--t-fg: #000000;
@@ -94,6 +102,13 @@
 }
 
 [data-theme='vt320'] {
+	--t-drop-glow: drop-shadow(0 0 10px rgb(255 155 0 / 0.55));
+	--t-crt: 1;
+	--t-crt-scan: 0.22;
+	--t-crt-ca: 0;
+	--t-crt-grille: 0;
+	--t-crt-bloom: 0.17;
+	--t-crt-roll: 1.0;
 	--t-box-glow: 0 0 9px rgb(255 155 0 / 0.15);
 	--t-bg: #170800;
 	--t-fg: #ff9a10;
@@ -109,6 +124,13 @@
 }
 
 [data-theme='grid'] {
+	--t-drop-glow: drop-shadow(0 0 9px rgb(255 152 16 / 0.5));
+	--t-crt: 0.85;
+	--t-crt-scan: 0.16;
+	--t-crt-ca: 0;
+	--t-crt-grille: 0;
+	--t-crt-bloom: 0.10;
+	--t-crt-roll: 0.8;
 	--t-box-glow: 0 0 9px rgb(255 152 16 / 0.13);
 	--t-bg: #120900;
 	--t-fg: #ff9810;
@@ -124,6 +146,13 @@
 }
 
 [data-theme='c64'] {
+	--t-drop-glow: none;
+	--t-crt: 0.7;
+	--t-crt-scan: 0.1;
+	--t-crt-ca: 0.0010;
+	--t-crt-grille: 0.09;
+	--t-crt-bloom: 0.03;
+	--t-crt-roll: 0.35;
 	--t-bg: #2a2ab8;
 	--t-fg: rgb(255 255 255 / 0.78);
 	--t-dim: rgb(255 255 255 / 0.45);
@@ -138,6 +167,13 @@
 }
 
 [data-theme='matrix'] {
+	--t-drop-glow: drop-shadow(0 0 10px rgb(160 224 68 / 0.5));
+	--t-crt: 1;
+	--t-crt-scan: 0.24;
+	--t-crt-ca: 0;
+	--t-crt-grille: 0;
+	--t-crt-bloom: 0.21;
+	--t-crt-roll: 1.0;
 	--t-box-glow: 0 0 9px rgb(160 224 68 / 0.13);
 	--t-bg: #000000;
 	--t-fg: rgb(160 224 68 / 0.9);
@@ -153,6 +189,13 @@
 }
 
 [data-theme='crypt'] {
+	--t-drop-glow: drop-shadow(0 0 10px rgb(255 0 0 / 0.5));
+	--t-crt: 0.9;
+	--t-crt-scan: 0.14;
+	--t-crt-ca: 0;
+	--t-crt-grille: 0;
+	--t-crt-bloom: 0.15;
+	--t-crt-roll: 0.6;
 	--t-box-glow: 0 0 9px rgb(255 0 0 / 0.14);
 	--t-bg: #100202;
 	--t-fg: #ee1100;
@@ -237,6 +280,44 @@
 		animation-duration: 0.01ms !important;
 		transition-duration: 0.01ms !important;
 	}
+}
+
+/* The checkbox governs the whole treatment, not just the warp. */
+.crt {
+	display: none;
+}
+
+[data-crt] .crt {
+	display: block;
+}
+
+/* WebGL path renders every CRT layer in the shader — the CSS overlay would double them. */
+[data-crt-gl] .crt {
+	display: none;
+}
+
+/* The page colour normally lives on <body>, but inside the canvas this element is captured
+   on its own. Without an opaque background of its own it is grabbed against transparency,
+   so text-shadow glow and any rgb(… / a) colour arrive with partial alpha and the shader
+   promotes them to full strength. Give it the background so the browser composites first. */
+[data-crt-gl] .crt-screen {
+	background-color: var(--t-bg);
+}
+
+/* Popovers render in the top layer, painted outside the page's stacking context, so neither
+   the shader nor the overlay reaches them — they need their own scanlines. Scoped to
+   [data-crt] like every other layer, or the menu keeps its lines after the effect is off.
+   `background-attachment: fixed` anchors them to the viewport so they continue the page's
+   own lines instead of restarting at the menu edge. */
+[data-crt] .crt-glass::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	border-radius: inherit;
+	opacity: var(--t-crt, 0);
+	background: repeating-linear-gradient(to bottom, rgb(0 0 0 / 0.34) 0 1px, transparent 1px 3px);
+	background-attachment: fixed;
 }
 
 .cursor-blink::after {

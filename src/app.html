@@ -12,6 +12,9 @@
 					document.documentElement.dataset.theme = t;
 					document.querySelector('link[rel="icon"]').href = '/favicon-' + t + '.svg';
 				}
+				if (localStorage.getItem('crt-curve') === '1') {
+					document.documentElement.setAttribute('data-crt', '');
+				}
 			} catch {}
 		</script>
 		%sveltekit.head%
