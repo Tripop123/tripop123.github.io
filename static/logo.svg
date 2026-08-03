@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="14.98987mm"
+   height="20.30802mm"
+   viewBox="0 0 14.98987 20.30802"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="Ram-Logo.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1177">
+      <stop
+         style="stop-color:#009328;stop-opacity:1"
+         offset="0"
+         id="stop1207" />
+      <stop
+         style="stop-color:#25cc7a;stop-opacity:0.55754668"
+         offset="0.5"
+         id="stop1212" />
+      <stop
+         style="stop-color:#0a8a00;stop-opacity:0"
+         offset="1"
+         id="stop1209" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1177"
+       id="linearGradient1205"
+       gradientUnits="userSpaceOnUse"
+       x1="58.449402"
+       y1="145.03485"
+       x2="58.569614"
+       y2="169.03966" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6"
+     inkscape:cx="52.145733"
+     inkscape:cy="45.620781"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="723"
+     inkscape:window-x="0"
+     inkscape:window-y="612"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-51.597911,-145.97403)">
+    <path
+       style="fill:none;stroke:url(#linearGradient1205);stroke-width:1.765;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+       d="m 56.433248,159.33794 -0.03867,6.06161 h -3.914167 v -18.54302 h 7.612014 c 7.036207,0 7.492856,9.54256 0.481784,9.50134 h -4.164957 l 0.03927,-3.16138 c 9.920534,0 9.334373,4.89349 9.181772,12.05034 l -6.020244,0.12939 v -6.06206 c 2.378405,0.0747 3.498307,0.42819 3.346211,3.19693"
+       id="path20"
+       sodipodi:nodetypes="ccccsccccccc" />
+  </g>
+</svg>
