@@ -30,8 +30,8 @@ export const profile = {
 } as const;
 
 export const intro = [
-	'I work across the whole of a product rather than one corner of it. Go services, PostgreSQL, and the Svelte frontend on top.',
-	'Most of the last three years went into QA Sphere, a multi-tenant SaaS test management platform. I shipped features across the stack, reviewed most of what the team wrote, and kept getting handed the things that break under load: tenant provisioning, list performance in large workspaces, and payments against a third-party API that guarantees nothing about consistency.'
+	'Software engineer in Dubai, eight years in. Go, PostgreSQL, Svelte, React.',
+	'Three years on QA Sphere, a multi-tenant SaaS test management platform: billing, authentication, AI features, the public API, and the performance work that comes with big accounts. Before that, event platforms at scale and fleet telematics.'
 ];
 
 export const roles: Role[] = [

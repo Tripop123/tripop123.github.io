@@ -11,7 +11,7 @@
 	<title>{profile.name} — Senior Software Engineer</title>
 	<meta
 		name="description"
-		content="{profile.name} — senior software engineer in {profile.location}. Go, TypeScript, Svelte. Multi-tenant SaaS, performance at scale, and correctness under concurrency."
+		content="{profile.name} — senior software engineer in {profile.location}. Go, TypeScript, Svelte. Multi-tenant SaaS: billing, authentication, AI features, and performance at scale."
 	/>
 </svelte:head>
 
